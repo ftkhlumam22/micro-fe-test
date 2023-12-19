@@ -1,0 +1,68 @@
+<div class="container-layout">
+
+    <button (click)="showCreateForm = !showCreateForm">Tambah Data</button>
+
+    <div *ngIf="showCreateForm">
+        <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+            <div>
+                <label for="title">Title:</label>
+                <input id="title" type="text" formControlName="title">
+                <small
+                    *ngIf="createForm.controls['title'].invalid && (createForm.controls['title'].touched || createForm.controls['title'].dirty)">
+                    Title is required.
+                </small>
+            </div>
+
+            <div>
+                <label for="body">Body:</label>
+                <input id="body" type="text" formControlName="body">
+                <small
+                    *ngIf="createForm.controls['body'].invalid && (createForm.controls['body'].touched || createForm.controls['body'].dirty)">
+                    Body is required.
+                </small>
+            </div>
+
+            <div>
+                <label for="userId">User ID:</label>
+                <input id="userId" type="number" formControlName="userId">
+                <small
+                    *ngIf="createForm.controls['userId'].invalid && (createForm.controls['userId'].touched || createForm.controls['userId'].dirty)">
+                    User ID is required.
+                </small>
+            </div>
+
+            <button type="submit" class="submit">Submit</button>
+        </form>
+    </div>
+
+
+    <div class="table-container">
+        <div *ngIf="isLoading" class="loading-spinner">
+            Loading...
+        </div>
+        <table *ngIf="!isLoading">
+            <thead>
+                <tr>
+                    <th>UserID</th>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Body</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let post of posts">
+                    <td>{{ post.userId }}</td>
+                    <td>{{ post.id }}</td>
+                    <td>{{ post.title }}</td>
+                    <td>{{ post.body }}</td>
+                    <td>
+                        <i class="fa fa-edit" (click)="startUpdate(post.id)"></i>
+                        <i class="fa fa-trash" (click)="deletePost(post.id)"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <app-toast></app-toast>
+</div>

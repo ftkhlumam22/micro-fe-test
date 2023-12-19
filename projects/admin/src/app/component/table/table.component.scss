@@ -1,0 +1,130 @@
+.table-container {
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  height: 73vh;
+  overflow-y: auto;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+      i {
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      i:hover {
+        color: #1d89fb;
+      }
+    }
+    th {
+      background-color: #f4f4f4;
+      position: sticky;
+      top: 0;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #1d89fb;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #135ba3;
+  }
+}
+
+input.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+small {
+  color: red;
+}
+
+button {
+  background-color: #1d89fb;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #135ba3;
+  transform: scale(1.05);
+}
+
+.submit {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #1d89fb;
+  outline: none;
+}
+
+.loading-spinner {
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+}
+
+/* Style ini opsional, tergantung pada desain spinner Anda */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container-layout {
+  max-height: 70vh;
+  overflow-y: auto;
+}

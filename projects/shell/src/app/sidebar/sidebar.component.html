@@ -1,0 +1,7 @@
+<aside class="sidebar">
+    <img src="{{ logoUrl }}" alt="Logo" class="sidebar-logo">
+    <a *ngFor="let link of links" [routerLink]="link.path" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}">
+        <i class="fa-solid {{ link.icon }}"></i> {{ link.title }}
+    </a>
+</aside>

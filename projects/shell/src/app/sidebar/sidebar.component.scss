@@ -1,0 +1,36 @@
+.sidebar {
+  background-color: #ffff;
+  padding: 15px;
+  height: 96vh;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
+
+  .sidebar-logo {
+    width: 100%;
+    height: auto;
+  }
+
+  a {
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 1em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    border-radius: 10px;
+
+    i {
+      margin-right: 20px;
+      margin-left: 15px;
+    }
+  }
+
+  a:hover,
+  a.active {
+    background-color: #1d89fb;
+    color: white;
+  }
+}

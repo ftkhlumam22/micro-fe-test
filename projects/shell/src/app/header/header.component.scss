@@ -1,0 +1,16 @@
+.navbar {
+  background-color: #f9f9f9;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+  .profile-pic {
+    float: right;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin: 10px 20px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
