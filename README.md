@@ -1,27 +1,62 @@
-# MicroTest
+# Adapted Micro Front-End on Angular Test
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
+This project is an adapted micro front-end architecture implemented using Angular.
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+To set up the project, you need to install the necessary dependencies. Run the following command:
 
-## Code scaffolding
+```bash
+npm install
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This will start the micro front-end services, making them available for development and testing.
 
-## Build
+## Creating a New Application
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To create a new application within this architecture, use the Angular CLI with specific options for routing and styling. Run the command:
 
-## Running unit tests
+```bash
+ng generate application "name_app" --routing=true --style=scss
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+Replace `"name_app"` with the desired name for your new application.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Setting Up a Host for a New App
 
-## Further help
+To set up a host for your new application, you need to add module federation capabilities. Use the following Angular CLI command:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+ng add @angular-architects/module-federation --project "name_app" --port 5000
+```
+
+
+Again, replace `"name_app"` with the name of your application. The `--port 5000` option specifies the port on which the app will run.
+
+## Setting Up a Remote for a New App
+
+To set up a remote for your new application, add module federation capabilities with a different port. Use the following Angular CLI command:
+
+```bash
+ng add @angular-architects/module-federation --project "name_app" --port 3000
+```
+
+
+Replace `"name_app"` with the name of your application. The `--port 3000` option specifies the port for the remote application.
+
+## App Preview
+
+To preview the application:
+
+### Dashboard Application
+
+[![App Preview](https://ik.imagekit.io/idfthljas/Screen%20Shot%202023-12-19%20at%2013.40.18_a3SRJytfc.png?updatedAt=1702968034023)](URL_of_your_image_here)
+
+## Admin Application
+
+[![App Preview](https://ik.imagekit.io/idfthljas/Screen%20Shot%202023-12-19%20at%2013.41.43_Dh0-PURQ_.png?updatedAt=1702968117225)](URL_of_your_image_here)
+
+## Further Assistance
+
+For more information and assistance on using Angular CLI and Angular's micro front-end architecture, you can refer to the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
