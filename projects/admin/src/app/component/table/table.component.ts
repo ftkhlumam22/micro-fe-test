@@ -9,6 +9,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { Post } from '../../models/posts.model';
 
 @Component({
   selector: 'app-table',
@@ -27,7 +28,7 @@ export class TableComponent implements OnInit, AfterViewInit {
 
   createForm: FormGroup;
   showCreateForm = false;
-  posts: any[] = [];
+  posts: Post[] = [];
   isLoading = true;
   isUpdateMode = false;
   updatingPostId: number = 0;
